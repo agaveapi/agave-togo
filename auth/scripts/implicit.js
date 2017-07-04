@@ -1,6 +1,6 @@
 // staging
 var OAuthClients = {
-    "agave.prod": {
+    "sandbox": {
         "clientKey": "8RTjkNpO0f9VrdFhQ23SNIiNurYa",
         "callbackUrl": "https://agaveapi.github.io/solveij/auth/",
         "scope": "PRODUCTION",
