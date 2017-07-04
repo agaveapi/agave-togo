@@ -1,21 +1,12 @@
 // staging
 var OAuthClients = {
     "agave.prod": {
-        "clientKey": "XRMcifqA2q_tvQ16bSZMwAnaTcEa",
-        "callbackUrl": "https://deardooley.github.io/agave-togo/auth/",
+        "clientKey": "8RTjkNpO0f9VrdFhQ23SNIiNurYa",
+        "callbackUrl": "https://agaveapi.github.io/solveij/auth/",
         "scope": "PRODUCTION",
-        "projectUrl": "https://agaveapi.co/",
+        "projectUrl": "https://solveij.com/",
         "supportUrl": "https://support.agaveapi.co",
-        "signupUrl": "https://public.agaveapi.co/create_account",
-        "allowsSignup": true
-    },
-    "iplantc.org": {
-        "clientKey": "fkZuyK5k0fJaTC6htUMRcyJz7E4a",
-        "callbackUrl": "https://deardooley.github.io/agave-togo/auth/",
-        "scope": "PRODUCTION",
-        "projectUrl": "https://cyverse.org/",
-        "supportUrl": "https://ask.cyverse.org/",
-        "signupUrl": "https://user.cyverse.org/register/",
+        "signupUrl": "https://agave-auth.solveij.com/create_account",
         "allowsSignup": false
     }
 };
