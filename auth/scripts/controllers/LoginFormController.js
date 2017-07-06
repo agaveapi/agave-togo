@@ -392,7 +392,7 @@ angular.module('AgaveAuth').controller('LoginFormController', function ($rootSco
   if ($stateParams.tenantId) {
     currentTenantId = $stateParams.tenantId;
   }
-  else if ($localStorage.tenant) {
+  else if ($localStorage.tenant && $localStorage.tenant.code) {
     currentTenantId =  $localStorage.tenant.code;
   }
   else {
