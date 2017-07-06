@@ -144,7 +144,7 @@ AgaveAuth.config(['$stateProvider', '$urlRouterProvider', function ($stateProvid
 
       // Login
       .state('login-form', {
-        url: "/signin/{tenantId}",
+        url: "/signin/:tenantId",
         templateUrl: "views/templates/login-form.html",
         data: {
           pageTitle: 'Sign In',
@@ -223,7 +223,7 @@ AgaveAuth.config(['$stateProvider', '$urlRouterProvider', function ($stateProvid
 
       // Signup
       .state('signup-form', {
-        url: "/signup/{tenantId}",
+        url: "/signup/:tenantId",
         templateUrl: "views/templates/signup-form.html",
         data: {pageTitle: 'Sign Up'},
         controller: "SignupFormController",
