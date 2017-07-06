@@ -108,11 +108,11 @@ AgaveAuth.config(['$stateProvider', '$urlRouterProvider', function ($stateProvid
                 function(response) {
 
                   // store profile
-                  $localStorage.profile = response;
+                  $localStorage.activeProfile = response;
                   return response;
                 },
                 function(err) {
-                  delete $localStorage.profile;
+                  delete $localStorage.activeProfile;
                   return null;
                 });
           }
@@ -331,13 +331,13 @@ AgaveAuth.run(["$rootScope", "$location", "$state", "$timeout", "$localStorage",
   $rootScope.$state = $state;
 
   // set the default cache for http requests
-  $http.defaults.cache = CacheFactory('agave-sdk', {
-    maxAge: 24 * 60 * 60 * 1000, // Items added to this cache expire after 1 day
-    // cacheFlushInterval: 30 * 24 * 60 * 60 * 1000, // This cache will clear itself every 30 days
-    deleteOnExpire: 'aggressive', // Items will be deleted from this cache when they expire
-    storageMode: 'localStorage',
-    storagePrefix: 'agavetogo.'
-  });
+  // $http.defaults.cache = CacheFactory('agave-sdk', {
+  //   maxAge: 24 * 60 * 60 * 1000, // Items added to this cache expire after 1 day
+  //   // cacheFlushInterval: 30 * 24 * 60 * 60 * 1000, // This cache will clear itself every 30 days
+  //   deleteOnExpire: 'aggressive', // Items will be deleted from this cache when they expire
+  //   storageMode: 'localStorage',
+  //   storagePrefix: 'agavetogo.'
+  // });
 
   $rootScope.requesting = true;
 
