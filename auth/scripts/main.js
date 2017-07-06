@@ -343,7 +343,8 @@ AgaveAuth.run(["$rootScope", "$location", "$state", "$timeout", "$localStorage",
 
   TenantsController.listTenants().then(
       function (response) {
-        settings.tenants = $filter('filter')(response, function (tenant, key) {
+        var tenants = [];
+        angular.forEach(response, function (tenant, key) {
           if (settings.oauth.clients[tenant.code] &&
               settings.oauth.clients[tenant.code].clientKey) {
             // hack until we push this info into the tenants api
@@ -360,9 +361,11 @@ AgaveAuth.run(["$rootScope", "$location", "$state", "$timeout", "$localStorage",
               tenant.allowsSignup = true;
             }
 
-            return tenant;
+            tenants.push(tenant);
           }
         });
+
+        settings.tenants = tenants;
 
       },
       function (message) {
