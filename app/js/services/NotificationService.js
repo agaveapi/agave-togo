@@ -150,7 +150,6 @@ angular.module('togo.realtime', [])
         this.disconnect = function () {
           if (channel) {
             channel.disconnect();
-            client.dis
           }
         }
 
