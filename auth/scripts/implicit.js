@@ -1,8 +1,8 @@
 // staging
 var OAuthClients = {
     "sandbox": {
-        "clientKey": "G3YjI5CnU9gE5Pq9xmFBgFFEOyoa",
-        "callbackUrl": "https://agaveapi.github.io/solveij/auth/",
+        "clientKey": "L7H9XLimXiPrszdcwvYDfBvYH3sa",
+        "callbackUrl": "http://developer.agaveapi.co/solveij/auth/",
         "scope": "PRODUCTION",
         "projectUrl": "https://solveij.com/",
         "supportUrl": "https://support.agaveapi.co",
